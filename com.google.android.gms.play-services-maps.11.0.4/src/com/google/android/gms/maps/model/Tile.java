@@ -1,0 +1,25 @@
+package com.google.android.gms.maps.model;
+
+import android.os.Parcel;
+import android.os.Parcelable.Creator;
+
+public final class Tile extends com.google.android.gms.common.internal.safeparcel.zza {
+   public static final Creator CREATOR = new zzq();
+   public final int width;
+   public final int height;
+   public final byte[] data;
+
+   public Tile(int var1, int var2, byte[] var3) {
+      this.width = var1;
+      this.height = var2;
+      this.data = var3;
+   }
+
+   public final void writeToParcel(Parcel var1, int var2) {
+      int var5 = com.google.android.gms.common.internal.safeparcel.zzd.zze(var1);
+      com.google.android.gms.common.internal.safeparcel.zzd.zzc(var1, 2, this.width);
+      com.google.android.gms.common.internal.safeparcel.zzd.zzc(var1, 3, this.height);
+      com.google.android.gms.common.internal.safeparcel.zzd.zza(var1, 4, this.data, false);
+      com.google.android.gms.common.internal.safeparcel.zzd.zzI(var1, var5);
+   }
+}

@@ -1,13 +1,11 @@
-# android.support.v7
+# Android stub artifacts
 
-# Flutter API
+These are artifacts published in the JitPack repository. These are not functional and only provides stubbed implementations. All methods in all classes throw a runtime exception. Because an Android app runs on a device, it will never use these libraries for execution, but the API compatibility allows an app to be compiled as if it was the real library.
 
-This is an artifact published in the JitPack repository. This is not functional and only provides stubbed implementations of the Flutter API. All methods in all classes throw a runtime exception. Because an Android app runs on a device, it will never use these libraries for execution, but the API compatibility allows an app to be compiled as if it was the real library.
-
-That would be useful if you are trying to build a java part of your flutter plugin implementation.
+That would be useful if you are trying to build a java part of your Android code.
 
 ## Repo
-[![](https://jitpack.io/v/Scarabei/Flutter.svg)](https://jitpack.io/#Scarabei/Flutter)
+[![](https://github.com/Scarabei/AndroidArtifacts.svg)](https://github.com/Scarabei/AndroidArtifacts)
 
 ## Usage
 
@@ -19,7 +17,7 @@ Add it in your root build.gradle at the end of repositories:
 
 ```	
 ext {
-   flutterAPIversion = "5278588d80-2017-07-24"
+   androidArtifactsVersion = "5278588d80-2017-07-24"
 }
 
 allprojects {
@@ -30,16 +28,16 @@ allprojects {
 }
 ```
 
-For the latest ```flutterAPIversion``` value see the builds section: https://github.com/Scarabei/Flutter/releases
+For the latest ```androidArtifactsVersion``` value see the builds section: https://github.com/Scarabei/AndroidArtifacts/releases
 
 #### Step 2. Add the dependency
 
 ```
   dependencies {
-      compile "com.github.Scarabei.Flutter:flutter-api:$flutterAPIversion"
+      compile "com.github.Scarabei.AndroidArtifacts:%put-dependency-name-here%:$androidArtifactsVersion"
   }
 ```
-Now you can develop/compile your java library aganst the Flutter API without Android and Flutter frameworks. Also you can publish it on a Maven repo. 
+Now you can develop/compile your java library aganst the Android API without Android framework. Also you can publish it on a Maven repo. 
 
 
 ### In your Android app project
@@ -50,7 +48,7 @@ This part is on you. Should look something like:
 
 ```
 dependencies {
-      compile "com.your.flutter.java-plugin"
+      compile "com.your.java-lib"
    }
 ```
 
@@ -81,13 +79,13 @@ android {
 
 See the link for details: https://developer.android.com/studio/build/multidex.html
 
-#### Step 6. Exclude the Flutter API stub.
+#### Step 6. Exclude the AndroidArtifacts stub.
 
 ```
 android {
    ...
    configurations {
-        all*.exclude group: "com.github.Scarabei.Flutter", module: "flutter-api"
+        all*.exclude group: "com.github.Scarabei.AndroidArtifacts", module: "put-dependency-name-here"
     }
 }
 ```
