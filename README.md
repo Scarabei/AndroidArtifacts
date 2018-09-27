@@ -1,3 +1,5 @@
+# This project is dead
+
 # Android stub artifacts
 
 These are artifacts published in the JitPack repository. These are not functional and only provides stubbed implementations. All methods in all classes throw a runtime exception. Because an Android app runs on a device, it will never use these libraries for execution, but the API compatibility allows an app to be compiled as if it was the real library.
