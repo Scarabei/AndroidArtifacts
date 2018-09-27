@@ -1,4 +1,4 @@
-# This project is dead
+# This repo is dead
 
 # Android stub artifacts
 
